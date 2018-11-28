@@ -1,29 +1,33 @@
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Typography from '@material-ui/core/Typography';
+import Page1 from './page1';
+import Page2 from './page2';
 import { withStyles } from '@material-ui/core/styles';
 import withRoot from '../withRoot';
 
 const styles = theme => ({
   root: {
     textAlign: 'center',
-    paddingTop: theme.spacing.unit * 20,
+    paddingTop: theme.spacing.unit,
   },
 });
 
 class App extends Component {
   render() {
     const { classes } = this.props;
-    
+
     return (
-      <div className={classes.root}>
-        <Typography variant="h4" gutterBottom>
-          React Material-UI
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          example project
-        </Typography>
-      </div>
+      <BrowserRouter>
+        <div className={classes.root}>
+          <Link to="/">Page 1</Link> | <Link to="/page2">Page 2</Link>
+          <Switch>
+            <Route path="/page2" component={Page2}/>
+            <Route path="/" component={Page1}/>
+          </Switch>
+        </div>
+      </BrowserRouter>
     );
   }
 }
