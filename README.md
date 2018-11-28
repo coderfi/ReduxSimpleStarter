@@ -1,4 +1,4 @@
-# ReduxSimpleStarter
+# ReduxSimpleStarter + Material-UI
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 
@@ -23,3 +23,9 @@ Click [here](https://github.com/StephenGrider/ReactStarter/releases) then downlo
 > npm install
 > npm start
 ```
+
+# Resources
+
+* https://github.com/mui-org/material-ui/tree/master/examples/create-react-app
+
+* https://github.com/StephenGrider/ReduxSimpleStarter
